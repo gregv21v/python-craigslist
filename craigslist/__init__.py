@@ -146,7 +146,7 @@ class CraigslistBase(object):
         sublinks = soup.find('ul', {'class': 'sublinks'})
         return sublinks and sublinks.find('a', text=area) is not None
 
-    def get_results(self, limit=None, sort_by=None, geotagged=False):
+    def get_results(self, start=0, limit=None, sort_by=None, geotagged=False):
         """
         Get results from Craigslist based on the specified filters.
 
@@ -162,8 +162,7 @@ class CraigslistBase(object):
                        "use: 'newest', 'price_asc' or 'price_desc'" % sort_by)
                 self.logger.error(msg)
                 raise ValueError(msg)
-
-        start = 0
+        
         total_so_far = 0
         total = 0
 
