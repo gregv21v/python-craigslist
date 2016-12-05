@@ -65,6 +65,8 @@ class CraigslistBase(object):
         'search_titles': {'url_key': 'srchType', 'value': 'T'},
         'has_image': {'url_key': 'hasPic', 'value': 1},
         'posted_today': {'url_key': 'postedToday', 'value': 1},
+        'search_distance': {'url_key': 'search_distance', 'value': None},
+        'postal' : {'url_key' : 'postal', 'value' : None}
     }
     extra_filters = {}
 
@@ -382,7 +384,6 @@ class CraigslistHousing(CraigslistBase):
         'max_price': {'url_key': 'max_price', 'value': None},
         'min_ft2': {'url_key': 'minSqft', 'value': None},
         'max_ft2': {'url_key': 'maxSqft', 'value': None},
-        'search_distance': {'url_key': 'search_distance', 'value': None},
         'zip_code': {'url_key': 'postal', 'value': None},
         'bedrooms': {'url_key': 'bedrooms', 'value': None},
         'bathrooms': {'url_key': 'bathrooms', 'value': None},
